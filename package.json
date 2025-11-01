@@ -1,0 +1,61 @@
+{
+  "name": "projeto-ong",
+  "version": "1.0.0",
+  "description": "Plataforma web completa para ONGs gerenciarem projetos, voluntários e doações",
+  "main": "src/js/app.js",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "build:analyze": "webpack --mode production --analyze",
+    "deploy": "node scripts/deploy.js",
+    "optimize:images": "node scripts/optimize-images.js",
+    "validate:html": "html-validate src/**/*.html",
+    "validate:accessibility": "pa11y-ci src/**/*.html",
+    "test:lighthouse": "lighthouse-batch -f urls.txt",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "ong",
+    "voluntariado",
+    "doações",
+    "projetos-sociais",
+    "acessibilidade",
+    "frontend"
+  ],
+  "author": "Adailton Rodrigues <adailtonr082ete.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "terser-webpack-plugin": "^5.3.9",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "copy-webpack-plugin": "^11.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "html-validate": "^8.1.1",
+    "pa11y-ci": "^3.0.1",
+    "lighthouse-batch": "^5.4.0",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sradailton/projeto-ong.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sradailton/projeto-ong/issues"
+  },
+  "homepage": "https://sradailton.github.io/projeto-ong"
+}

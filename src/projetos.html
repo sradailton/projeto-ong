@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os projetos sociais da ONG Connect e descubra como você pode ajudar">
+    <title>Projetos Sociais - ONG Connect</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-content">
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="container">
+                <nav class="navbar">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.svg" alt="ONG Connect" width="40" height="40">
+                        <span>ONG Connect</span>
+                    </a>
+
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="projetos.html" class="nav-link" aria-current="page">Projetos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="projetos.html" class="nav-link dropdown-toggle">
+                                Categorias
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#educacao" class="dropdown-item">Educação</a></li>
+                                <li><a href="#meio-ambiente" class="dropdown-item">Meio Ambiente</a></li>
+                                <li><a href="#assistencia" class="dropdown-item">Assistência Social</a></li>
+                                <li><a href="#saude" class="dropdown-item">Saúde</a></li>
+                                <li><a href="#cultura" class="dropdown-item">Cultura</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cadastro.html" class="nav-link">Cadastro</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <a href="cadastro.html" class="btn btn-secondary btn-sm">Entrar</a>
+                        <a href="cadastro.html" class="btn btn-primary btn-sm">Cadastrar</a>
+                    </div>
+
+                    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section Projetos -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Nossos Projetos Sociais</h1>
+                        <p class="text-lead">Conheça as iniciativas que estão transformando vidas e descubra como você pode fazer parte dessa mudança.</p>
+                        
+                        <!-- Filtros Rápidos -->
+                        <div class="quick-filters">
+                            <div class="filter-buttons">
+                                <button class="filter-btn active" data-filter="all">Todos</button>
+                                <button class="filter-btn" data-filter="educacao">Educação</button>
+                                <button class="filter-btn" data-filter="meio-ambiente">Meio Ambiente</button>
+                                <button class="filter-btn" data-filter="assistencia">Assistência</button>
+                                <button class="filter-btn" data-filter="saude">Saúde</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="assets/images/hero-projetos.jpg" alt="Diversos projetos sociais em ação nas comunidades" width="600" height="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtros Avançados -->
+        <section class="section-sm filters-section">
+            <div class="container">
+                <form class="filters-form" id="projectsFilter">
+                    <div class="filters-grid">
+                        <div class="filter-group">
+                            <label for="search" class="filter-label">Buscar Projetos</label>
+                            <input type="text" id="search" name="search" class="form-control" 
+                                   placeholder="Digite o nome do projeto ou palavra-chave...">
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="category" class="filter-label">Categoria</label>
+                            <select id="category" name="category" class="form-control">
+                                <option value="">Todas as categorias</option>
+                                <option value="educacao">Educação</option>
+                                <option value="meio-ambiente">Meio Ambiente</option>
+                                <option value="assistencia">Assistência Social</option>
+                                <option value="saude">Saúde</option>
+                                <option value="cultura">Cultura</option>
+                                <option value="esportes">Esportes</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="status" class="filter-label">Status</label>
+                            <select id="status" name="status" class="form-control">
+                                <option value="">Todos os status</option>
+                                <option value="ativo">Ativos</option>
+                                <option value="concluido">Concluídos</option>
+                                <option value="arrecadacao">Em arrecadação</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="location" class="filter-label">Localização</label>
+                            <select id="location" name="location" class="form-control">
+                                <option value="">Todas as regiões</option>
+                                <option value="norte">Região Norte</option>
+                                <option value="nordeste">Região Nordeste</option>
+                                <option value="centro-oeste">Região Centro-Oeste</option>
+                                <option value="sudeste">Região Sudeste</option>
+                                <option value="sul">Região Sul</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-actions">
+                        <button type="submit" class="btn btn-primary">Aplicar Filtros</button>
+                        <button type="reset" class="btn btn-secondary">Limpar Filtros</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Projetos em Destaque -->
+        <section class="section" aria-labelledby="destaques-title">
+            <div class="container">
+                <h2 id="destaques-title" class="section-title">Projetos em Destaque</h2>
+                
+                <div class="projects-grid" id="projects-container">
+                    <!-- Projeto 1 -->
+                    <article class="project-card card" data-category="educacao" data-status="ativo">
+                        <div class="project-card__image">
+                            <img src="assets/images/hero-home.jpg" alt="Crianças em sala de aula com materiais educativos" loading="lazy">
+                            <div class="project-card__badges">
+                                <span class="badge badge-primary">Educação</span>
+                                <span class="badge badge-success">Ativo</span>
+                                <span class="badge badge-accent">Urgente</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Educação para Todos</h3>
+                            <p class="project-card__description">Projeto que oferece aulas de reforço escolar, material didático e atividades extracurriculares para crianças em situação de vulnerabilidade social em comunidades carentes.</p>
+                            
+                            <div class="project-card__meta">
+                                <span class="location">📍 São Paulo, SP</span>
+                                <span class="volunteers">👥 50 voluntários</span>
+                            </div>
+                            
+                            <div class="project-card__progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <strong>R$ 32.500,00</strong> de R$ 50.000,00 (65%)
+                                </div>
+                            </div>
+                            
+                            <div class="project-card__stats">
+                                <div class="stat">
+                                    <span class="stat-number">150</span>
+                                    <span class="stat-label">crianças beneficiadas</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">meses de duração</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-card__actions">
+                                <button class="btn btn-primary btn-sm" data-action="view-project" data-project-id="1">
+                                    Ver Detalhes
+                                </button>
+                                <button class="btn btn-secondary btn-sm" data-action="volunteer-project" data-project-id="1">
+                                    Quero Ajudar
+                                </button>
+                                <button class="btn btn-accent btn-sm" data-action="donate-project" data-project-id="1">
+                                    Doar
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2 -->
+                    <article class="project-card card" data-category="meio-ambiente" data-status="ativo">
+                        <div class="project-card__image">
+                            <img src="assets/images/hero-home.jpg" alt="Voluntários plantando árvores em área urbana" loading="lazy">
+                            <div class="project-card__badges">
+                                <span class="badge badge-secondary">Meio Ambiente</span>
+                                <span class="badge badge-success">Ativo</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Reflorestamento Urbano</h3>
+                            <p class="project-card__description">Iniciativa de plantio de árvores nativas em áreas urbanas degradadas, promovendo conscientização ambiental e melhorando a qualidade do ar nas grandes cidades.</p>
+                            
+                            <div class="project-card__meta">
+                                <span class="location">📍 Belo Horizonte, MG</span>
+                                <span class="volunteers">👥 30 voluntários</span>
+                            </div>
+                            
+                            <div class="project-card__progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-fill" style="width: 42%"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <strong>R$ 12.600,00</strong> de R$ 30.000,00 (42%)
+                                </div>
+                            </div>
+                            
+                            <div class="project-card__stats">
+                                <div class="stat">
+                                    <span class="stat-number">500+</span>
+                                    <span class="stat-label">árvores plantadas</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">5</span>
+                                    <span class="stat-label">bairros atendidos</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-card__actions">
+                                <button class="btn btn-primary btn-sm" data-action="view-project" data-project-id="2">
+                                    Ver Detalhes
+                                </button>
+                                <button class="btn btn-secondary btn-sm" data-action="volunteer-project" data-project-id="2">
+                                    Quero Ajudar
+                                </button>
+                                <button class="btn btn-accent btn-sm" data-action="donate-project" data-project-id="2">
+                                    Doar
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3 -->
+                    <article class="project-card card" data-category="assistencia" data-status="ativo">
+                        <div class="project-card__image">
+                            <img src="assets/images/hero-home.jpg" alt="Voluntários distribuindo cestas básicas para famílias" loading="lazy">
+                            <div class="project-card__badges">
+                                <span class="badge badge-accent">Assistência Social</span>
+                                <span class="badge badge-success">Ativo</span>
+                                <span class="badge badge-warning">Alta Necessidade</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Alimentando Esperanças</h3>
+                            <p class="project-card__description">Distribuição mensal de cestas básicas e refeições nutritivas para famílias em situação de insegurança alimentar em comunidades carentes da região metropolitana.</p>
+                            
+                            <div class="project-card__meta">
+                                <span class="location">📍 Rio de Janeiro, RJ</span>
+                                <span class="volunteers">👥 80 voluntários</span>
+                            </div>
+                            
+                            <div class="project-card__progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-fill" style="width: 78%"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <strong>R$ 46.800,00</strong> de R$ 60.000,00 (78%)
+                                </div>
+                            </div>
+                            
+                            <div class="project-card__stats">
+                                <div class="stat">
+                                    <span class="stat-number">300</span>
+                                    <span class="stat-label">famílias atendidas</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">1.200+</span>
+                                    <span class="stat-label">refeições/mês</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-card__actions">
+                                <button class="btn btn-primary btn-sm" data-action="view-project" data-project-id="3">
+                                    Ver Detalhes
+                                </button>
+                                <button class="btn btn-secondary btn-sm" data-action="volunteer-project" data-project-id="3">
+                                    Quero Ajudar
+                                </button>
+                                <button class="btn btn-accent btn-sm" data-action="donate-project" data-project-id="3">
+                                    Doar
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 4 -->
+                    <article class="project-card card" data-category="saude" data-status="arrecadacao">
+                        <div class="project-card__image">
+                            <img src="assets/images/hero-home.jpg" alt="Profissionais de saúde atendendo comunidade" loading="lazy">
+                            <div class="project-card__badges">
+                                <span class="badge badge-info">Saúde</span>
+                                <span class="badge badge-warning">Em arrecadação</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Saúde na Comunidade</h3>
+                            <p class="project-card__description">Levar atendimento médico básico, orientação em saúde e prevenção de doenças para comunidades carentes através de mutirões mensais de saúde.</p>
+                            
+                            <div class="project-card__meta">
+                                <span class="location">📍 Salvador, BA</span>
+                                <span class="volunteers">👥 25 voluntários</span>
+                            </div>
+                            
+                            <div class="project-card__progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-fill" style="width: 25%"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <strong>R$ 7.500,00</strong> de R$ 30.000,00 (25%)
+                                </div>
+                            </div>
+                            
+                            <div class="project-card__stats">
+                                <div class="stat">
+                                    <span class="stat-number">0</span>
+                                    <span class="stat-label">mutirões realizados</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">500+</span>
+                                    <span class="stat-label">pessoas a beneficiar</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-card__actions">
+                                <button class="btn btn-primary btn-sm" data-action="view-project" data-project-id="4">
+                                    Ver Detalhes
+                                </button>
+                                <button class="btn btn-secondary btn-sm" data-action="volunteer-project" data-project-id="4">
+                                    Quero Ajudar
+                                </button>
+                                <button class="btn btn-accent btn-sm" data-action="donate-project" data-project-id="4">
+                                    Doar
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 5 -->
+                    <article class="project-card card" data-category="cultura" data-status="concluido">
+                        <div class="project-card__image">
+                            <img src="assets/images/hero-home.jpg" alt="Oficina de arte para crianças e adolescentes" loading="lazy">
+                            <div class="project-card__badges">
+                                <span class="badge badge-success">Cultura</span>
+                                <span class="badge badge-info">Concluído</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Arte para Transformar</h3>
+                            <p class="project-card__description">Oficinas de arte, música e teatro para crianças e adolescentes, promovendo desenvolvimento criativo e inclusão social através da expressão artística.</p>
+                            
+                            <div class="project-card__meta">
+                                <span class="location">📍 Porto Alegre, RS</span>
+                                <span class="volunteers">👥 40 voluntários</span>
+                            </div>
+                            
+                            <div class="project-card__progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <strong>R$ 25.000,00</strong> de R$ 25.000,00 (100%)
+                                </div>
+                            </div>
+                            
+                            <div class="project-card__stats">
+                                <div class="stat">
+                                    <span class="stat-number">200</span>
+                                    <span class="stat-label">jovens atendidos</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">6</span>
+                                    <span class="stat-label">meses de atividades</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-card__actions">
+                                <button class="btn btn-primary btn-sm" data-action="view-project" data-project-id="5">
+                                    Ver Resultados
+                                </button>
+                                <button class="btn btn-secondary btn-sm" disabled>
+                                    Projeto Concluído
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Paginação -->
+                <div class="pagination">
+                    <button class="pagination-btn pagination-prev" disabled>
+                        ← Anterior
+                    </button>
+                    
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                        <span class="pagination-ellipsis">...</span>
+                        <button class="pagination-number">8</button>
+                    </div>
+                    
+                    <button class="pagination-btn pagination-next">
+                        Próxima →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Como Ajudar -->
+        <section class="section help-section" aria-labelledby="como-ajudar-title">
+            <div class="container">
+                <h2 id="como-ajudar-title" class="section-title">Como Você Pode Ajudar</h2>
+                
+                <div class="help-options">
+                    <div class="help-option card">
+                        <div class="help-icon">👥</div>
+                        <h3>Seja Voluntário</h3>
+                        <p>Doe seu tempo e habilidades para causas que precisam de apoio. Encontre oportunidades que combinam com seu perfil.</p>
+                        <ul class="help-benefits">
+                            <li>Flexibilidade de horários</li>
+                            <li>Diversas áreas de atuação</li>
+                            <li>Certificado de participação</li>
+                            <li>Experiência enriquecedora</li>
+                        </ul>
+                        <a href="cadastro.html" class="btn btn-primary">Quero ser Voluntário</a>
+                    </div>
+                    
+                    <div class="help-option card">
+                        <div class="help-icon">💙</div>
+                        <h3>Faça uma Doação</h3>
+                        <p>Sua contribuição financeira transforma vidas. Todo valor é aplicado diretamente nos projetos com transparência total.</p>
+                        <ul class="help-benefits">
+                            <li>Doação única ou recorrente</li>
+                            <li>Valores a partir de R$ 25</li>
+                            <li>Transparência na aplicação</li>
+                            <li>Relatórios de impacto</li>
+                        </ul>
+                        <button class="btn btn-accent" data-action="open-donation-modal">Fazer Doação</button>
+                    </div>
+                    
+                    <div class="help-option card">
+                        <div class="help-icon">📢</div>
+                        <h3>Divulgue</h3>
+                        <p>Compartilhe nossos projetos em suas redes sociais e ajude a alcançar mais pessoas que podem fazer a diferença.</p>
+                        <ul class="help-benefits">
+                            <li>Compartilhe nas redes sociais</li>
+                            <li>Convide amigos e familiares</li>
+                            <li>Organize eventos de arrecadação</li>
+                            <li>Seja um embaixador da causa</li>
+                        </ul>
+                        <div class="share-buttons">
+                            <button class="btn btn-share" data-share="facebook">Facebook</button>
+                            <button class="btn btn-share" data-share="twitter">Twitter</button>
+                            <button class="btn btn-share" data-share="whatsapp">WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de Doação -->
+        <div id="donationModal" class="modal" role="dialog" aria-labelledby="donation-title" aria-hidden="true">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="donation-title" class="modal-title">Fazer uma Doação</h3>
+                    <button class="modal-close" aria-label="Fechar modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <form class="donation-form">
+                        <div class="form-group">
+                            <label class="form-label">Selecione o valor:</label>
+                            <div class="donation-amounts">
+                                <button type="button" class="amount-btn" data-amount="25">R$ 25</button>
+                                <button type="button" class="amount-btn" data-amount="50">R$ 50</button>
+                                <button type="button" class="amount-btn active" data-amount="100">R$ 100</button>
+                                <button type="button" class="amount-btn" data-amount="250">R$ 250</button>
+                                <button type="button" class="amount-btn" data-amount="500">R$ 500</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customAmount" class="form-label">Ou digite outro valor:</label>
+                            <input type="number" id="customAmount" class="form-control" placeholder="R$ 0,00" min="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Frequência da doação:</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="frequency" value="unique" checked>
+                                    <span class="radio-custom"></span>
+                                    Doação Única
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="frequency" value="monthly">
+                                    <span class="radio-custom"></span>
+                                    Doação Mensal
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-action="close-modal">Cancelar</button>
+                    <button class="btn btn-primary" data-action="process-donation">Continuar com Pagamento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <script src="js/app.js" type="module"></script>
+</body>
+</html>

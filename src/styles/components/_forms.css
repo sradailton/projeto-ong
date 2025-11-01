@@ -1,0 +1,218 @@
+/* ===== FORM SYSTEM ===== */
+.form-group {
+  margin-bottom: var(--space-6);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-medium);
+  color: var(--neutral-800);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  transition: all var(--transition-fast);
+  background-color: white;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.form-control:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: var(--error-color);
+}
+
+.form-control:disabled {
+  background-color: var(--neutral-100);
+  color: var(--neutral-500);
+  cursor: not-allowed;
+}
+
+/* Form Helpers */
+.form-help {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--neutral-600);
+}
+
+.form-error {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--error-color);
+}
+
+/* Form Row */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* Form Sections */
+.form-section {
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  margin-bottom: var(--space-8);
+  background: white;
+}
+
+.form-section__title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-6);
+  color: var(--neutral-900);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--neutral-200);
+}
+
+/* Custom Radio and Checkbox */
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.radio-option,
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.radio-option:hover,
+.checkbox-option:hover {
+  background-color: var(--neutral-50);
+}
+
+.radio-option input,
+.checkbox-option input {
+  display: none;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--neutral-400);
+  border-radius: 50%;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.radio-custom::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-500);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform var(--transition-fast);
+}
+
+.radio-option input:checked + .radio-custom {
+  border-color: var(--primary-500);
+}
+
+.radio-option input:checked + .radio-custom::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--neutral-400);
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.checkbox-custom::after {
+  content: '✓';
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform var(--transition-fast);
+}
+
+.checkbox-option input:checked + .checkbox-custom {
+  background-color: var(--primary-500);
+  border-color: var(--primary-500);
+}
+
+.checkbox-option input:checked + .checkbox-custom::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Estados de validação */
+.form-control.valid {
+  border-color: var(--success-color);
+}
+
+.form-control.invalid {
+  border-color: var(--error-color);
+}
+
+.field-error {
+  margin-top: var(--space-2);
+}
+
+.error-message {
+  display: block;
+  color: var(--error-color);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-1);
+}
+
+/* Estados do formulário */
+.form-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.form-success .form-control {
+  border-color: var(--success-color);
+}
+
+.form-error .form-control.invalid {
+  border-color: var(--error-color);
+}
+
+/* Loading no botão */
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}

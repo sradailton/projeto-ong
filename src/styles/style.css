@@ -1,0 +1,76 @@
+/* ===== MAIN STYLESHEET ===== */
+
+/* Base */
+@import url('base/_variables.css');
+@import url('base/_reset.css');
+@import url('base/_typography.css');
+
+/* Components */
+@import url('components/_buttons.css');
+@import url('components/_cards.css');
+@import url('components/_forms.css');
+@import url('components/_navigation.css');
+@import url('components/_alerts.css');
+
+/* Layout */
+@import url('layout/_grid.css');
+@import url('layout/_header.css');
+@import url('layout/_footer.css');
+@import url('layout/_sections.css');
+
+/* Utils */
+@import url('utils/_helpers.css');
+@import url('utils/_animations.css');
+
+/* ===== CUSTOM STYLES ===== */
+.main-content {
+  min-height: 100vh;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--neutral-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-500), var(--secondary-500));
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+
+/* Loading States */
+.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .break-after {
+    page-break-after: always;
+  }
+}

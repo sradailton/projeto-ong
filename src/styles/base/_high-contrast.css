@@ -1,0 +1,125 @@
+/* ===== MODO ALTO CONTRASTE ===== */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-500: #000000;
+    --primary-600: #000000;
+    --secondary-500: #333333;
+    --accent-500: #666666;
+    --neutral-50: #ffffff;
+    --neutral-100: #f0f0f0;
+    --neutral-900: #000000;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .btn {
+    border: 2px solid #000000 !important;
+  }
+
+  .btn-primary {
+    background: #000000 !important;
+    color: #ffffff !important;
+  }
+
+  .card {
+    border: 2px solid #000000 !important;
+    box-shadow: none !important;
+  }
+
+  .form-control {
+    border: 2px solid #000000 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .form-control:focus {
+    outline: 3px solid #000000 !important;
+    outline-offset: 2px;
+  }
+}
+
+/* ===== MODO ESCURO ACESSÍVEL ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-500: #4a90e2;
+    --primary-600: #357abd;
+    --neutral-50: #1a1a1a;
+    --neutral-100: #2d2d2d;
+    --neutral-200: #404040;
+    --neutral-300: #555555;
+    --neutral-400: #6b6b6b;
+    --neutral-500: #828282;
+    --neutral-600: #9a9a9a;
+    --neutral-700: #b3b3b3;
+    --neutral-800: #cccccc;
+    --neutral-900: #e6e6e6;
+  }
+
+  body {
+    background: #1a1a1a;
+    color: #e6e6e6;
+  }
+
+  .card {
+    background: #2d2d2d;
+    border-color: #404040;
+  }
+
+  .form-control {
+    background: #2d2d2d;
+    border-color: #555555;
+    color: #e6e6e6;
+  }
+
+  .form-control::placeholder {
+    color: #9a9a9a;
+  }
+}
+
+/* ===== SUPORTE A REDUÇÃO DE MOVIMENTO ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== FOCUS VISIBLE MELHORADO ===== */
+.focus-visible {
+  outline: 3px solid var(--primary-500) !important;
+  outline-offset: 2px !important;
+}
+
+/* Skip link para navegação por teclado */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-500);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  z-index: var(--z-popover);
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Alto contraste forçado */
+.high-contrast {
+  filter: contrast(200%) brightness(110%);
+}
+
+.high-contrast img {
+  filter: contrast(150%) brightness(120%);
+}
